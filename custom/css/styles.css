@@ -1,0 +1,89 @@
+html {
+  box-sizing: border-box; }
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit; }
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0; }
+
+.container {
+  width: 80vmin;
+  margin: 0 auto; }
+
+header {
+  text-align: center;
+  max-height: 20vh;
+  overflow: hidden; }
+
+.meta {
+  display: flex;
+  justify-content: space-around; }
+
+.stars {
+  /* Remove styles from list */
+  list-style-type: none;
+  list-style-position: inside;
+  padding: 0;
+  margin: 0; }
+  .stars li {
+    display: inline-block; }
+
+.gameboard {
+  background-image: linear-gradient(to top right, red, purple, blue);
+  border-radius: 5px;
+  width: 80vmin;
+  height: 80vmin;
+  padding: 1vmin; }
+
+.deck {
+  /* Remove styles from list */
+  list-style-type: none;
+  list-style-position: inside;
+  padding: 0;
+  margin: 0;
+  /* Setup CSS Grid for layout */
+  display: grid;
+  grid-template-columns: repeat(4, 18.75vmin);
+  grid-template-rows: repeat(4, 18.75vmin);
+  grid-gap: 1vmin;
+  justify-content: center;
+  align-content: center; }
+
+.card {
+  background: rgba(250, 250, 250, 0.4);
+  border: 3px solid white;
+  border-radius: 5px; }
+  .card:hover {
+    background: rgba(250, 250, 250, 0.5);
+    cursor: pointer; }
+  .card.selected#axe, .card.matched#axe {
+    background: no-repeat center/40% url("../imgs/axe.png"); }
+  .card.selected#backpack, .card.matched#backpack {
+    background: no-repeat center/40% url("../imgs/backpack-1.png"); }
+  .card.selected#cabin, .card.matched#cabin {
+    background: no-repeat center/40% url("../imgs/cabin.png"); }
+  .card.selected#campfire, .card.matched#campfire {
+    background: no-repeat center/40% url("../imgs/campfire.png"); }
+  .card.selected#canoe, .card.matched#canoe {
+    background: no-repeat center/40% url("../imgs/canoe.png"); }
+  .card.selected#lamp, .card.matched#lamp {
+    background: no-repeat center/40% url("../imgs/lamp-1.png"); }
+  .card.selected#knife, .card.matched#knife {
+    background: no-repeat center/40% url("../imgs/swiss-army-knife.png"); }
+  .card.selected#tent, .card.matched#tent {
+    background: no-repeat center/40% url("../imgs/tent-1.png"); }
+  .card.selected {
+    border-color: rgba(32, 178, 170, 0.8); }
+  .card.matched {
+    border-color: rgba(36, 221, 135, 0.8); }
+  .card.no-match {
+    border-color: rgba(221, 58, 36, 0.8); }
+
+/*# sourceMappingURL=styles.css.map */

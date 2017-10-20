@@ -1,0 +1,14 @@
+.deck {
+  /* Remove styles from list */
+  list-style-type: none;
+  list-style-position: inside;
+  padding: 0;
+  margin: 0;
+  /* Setup CSS Grid for layout */
+  display: grid;
+  grid-template-columns: repeat($num_row_col, $row_col_size);
+  grid-template-rows: repeat($num_row_col, $row_col_size);
+  grid-gap: $spacing;
+  justify-content: center; // Horizontal Alignment
+  align-content: center; // Vertical Alignment
+}

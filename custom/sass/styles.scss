@@ -1,0 +1,43 @@
+// Grid Variables:
+$total_size: 80vmin;
+$spacing: 1vmin;
+$num_row_col: 4;
+$remaining_space: $total_size - (($num_row_col + 1) * $spacing);
+$row_col_size: $remaining_space / $num_row_col;
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: $total_size;
+  margin: 0 auto;
+}
+
+@import 'header';
+
+.gameboard {
+  background-image: linear-gradient(to top right, red, purple, blue);
+  border-radius: 5px;
+  width: $total_size;
+  height: $total_size;
+  padding: 1vmin;
+}
+
+@import 'deck';
+
+@import 'cards';

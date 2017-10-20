@@ -1,0 +1,21 @@
+header {
+  text-align: center;
+  max-height: 20vh;
+  overflow: hidden;
+}
+
+.meta {
+  display: flex;
+  justify-content: space-around;
+}
+
+.stars {
+  /* Remove styles from list */
+  list-style-type: none;
+  list-style-position: inside;
+  padding: 0;
+  margin: 0;
+  li {
+    display: inline-block;
+  }
+}
