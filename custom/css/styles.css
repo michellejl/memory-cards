@@ -24,7 +24,8 @@ header {
 
 .meta {
   display: flex;
-  justify-content: space-around; }
+  justify-content: space-between;
+  padding: 10px; }
 
 .stars {
   /* Remove styles from list */
@@ -36,7 +37,7 @@ header {
     display: inline-block; }
 
 .gameboard {
-  background-image: linear-gradient(to top right, red, purple, blue);
+  background-image: linear-gradient(to top right, green, brown);
   border-radius: 5px;
   width: 80vmin;
   height: 80vmin;

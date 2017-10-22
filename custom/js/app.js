@@ -2,12 +2,21 @@ let flipped_cards = 0;
 let moves = 0;
 let first_card;
 
+// Timer Variables
+var stime = 0;
+var mtime = 0;
+
 /* 
   Much of the game logic happens when the user clicks on a card.
   Here I am capturing the click event and following game logic
   to decide what should happen each time.
 */
 $('.card').on('click', function () {
+
+  if (moves === 0 && flipped_cards === 0) {
+    var counter = setInterval(timer, 1000);
+  }
+
   // Checks to make sure the card clicked isn't already selected
   if (!$(this).hasClass('selected')) {
     $(this).addClass('selected');
@@ -49,7 +58,27 @@ $('.card').on('click', function () {
   }
 })
 
+// Function for game timer
+function timer() {
+  stime++;
+  if (stime === 60) {
+    stime = 0;
+    mtime++;
+  }
 
+  if (stime <= 9) {
+    seconds = '0' + stime;
+  } else {
+    seconds = stime;
+  }
+  if (mtime <= 9) {
+    minutes = '0' + mtime;
+  } else {
+    minutes = mtime;
+  }
+
+  $('.timer').html(minutes + ':' + seconds)
+}
 
 
 
@@ -58,3 +87,6 @@ $('.restart').hover(
   function () { $('i.fa-repeat').addClass('fa-spin') },
   function () { $('i.fa-repeat').removeClass('fa-spin') }
 )
+
+
+
